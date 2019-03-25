@@ -1,6 +1,8 @@
 
 'use strict';
 
+
+//ARRAYS
 let arr = [1,2,3,4,5,6,7,8,9,10];
 
 //for loop
@@ -25,13 +27,30 @@ const whileLoop = (arr) => {
 
 whileLoop(arr);
 
-//reduce();
+//map();
+let map = (arr, callback) => {
+  let outputArr = [];
+  for(let i = 0; i < arr.length; i++) {
+    outputArr.push(callback(arr[i]));
+  };
+};
 
 //filter();
+let filter = (arr, callback) => {
+  let results = [];
+  for(let i = 0; i < arr.length; i++){
+    if(callback(arr[i])){
+      results.push(arr[i]);
+    };
+  };
+  console.log('results: ', results);
+  return results;
+};
+filter();
 
-//map();
+//reduce();
 
-//Objects
+//OBJECTS
 const people = ['Kookla','Fran','Ollie'];
 
 const stuff = {
